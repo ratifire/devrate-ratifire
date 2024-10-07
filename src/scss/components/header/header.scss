@@ -1,5 +1,15 @@
 header {
-  .navbar {
-    background: lightgreen;
-  }
+  height: 80px;
+  background: transparent;
+}
+
+.navbar-link {
+  margin: 0 16px;
+}
+
+.navbar-button {
+  height: 46px;
+  border: 1px solid $transparent-color;
+  border-radius: 8px;
+  background-color: $transparent-color;
 }
