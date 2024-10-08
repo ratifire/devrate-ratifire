@@ -40,8 +40,13 @@ const scssCompile = () => {
 };
 
 const images = () => {
-  return gulp.src("./src/img/**/*").pipe(gulp.dest("./dist/img/"));
+  return gulp.src("./src/assets/**/*").pipe(gulp.dest("./dist/assets/"));
 };
+
+const videos = () => {
+  return gulp.src("./src/assets/*.{mp4,mov}").pipe(gulp.dest("./dist/assets/"));
+};
+
 const watchers = () => {
   gulp.watch("./src/pages/**/*.html", gulp.parallel(htmlCompile));
   gulp.watch(
@@ -50,14 +55,19 @@ const watchers = () => {
     gulp.parallel(scssCompile),
   );
   gulp.watch(
-    "./src/img/**/*",
+    "./src/assets/**/*",
     { events: ["add", "unlink"] },
     gulp.parallel(images),
+  );
+  gulp.watch(
+    "./src/assets/**/*",
+    { events: ["add", "unlink"] },
+    gulp.parallel(videos),
   );
 };
 
 exports.default = gulp.series(
   cleanFiles,
-  gulp.parallel(htmlCompile, scssCompile, images),
+  gulp.parallel(htmlCompile, scssCompile, images, videos),
   gulp.parallel(startServer, watchers),
 );

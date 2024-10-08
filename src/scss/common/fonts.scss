@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("../../src/fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../../src/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url("../../src/fonts/Ubuntu-Regular.woff2") format("woff2"),
+    url("../../src/fonts/Ubuntu-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url("../../src/fonts/Ubuntu-Medium.woff2") format("woff2"),
+    url("../../src/fonts/Ubuntu-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url("../../src/fonts/Ubuntu-Bold.woff2") format("woff2"),
+    url("../../src/fonts/Ubuntu-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url("../../src/fonts/Inter-Regular.woff2") format("woff2"),
+    url("../../src/fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url("../../src/fonts/Inter-Medium.woff2") format("woff2"),
+    url("../../src/fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
