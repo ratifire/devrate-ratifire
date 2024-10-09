@@ -10,18 +10,24 @@
           <p class="contact-description">Have a question or a project in mind? We’re here to help! Whether you need IT advice or a custom solution, our team is ready. Drop us a message and let's start bringing your vision to life.</p>
           <form class="form">
             <div class="form-container">
-              <input class="form-user" type="text" id="name" placeholder="Full name" required>
-              <input class="form-email" type="email" id="email" placeholder="Email" required>
-              <input class="form-company" type="text" id="company" placeholder="Company title" required>
-              <textarea class="form-describe" id="messege" name="message" placeholder="Describe your project"></textarea>
+              <div class="input-wrapper">
+                <input class="form-user" type="text" id="name" placeholder="Full name" required>
+                <img class="input-icon" src="../../assets/contact-user.svg" width="32" height="24">
+              </div>
+              <div class="input-wrapper">
+                <input class="form-email" type="email" id="email" placeholder="Email" required>
+                <img class="input-icon" src="../../assets/contact-email.svg" width="32" height="24">
+              </div>
+              <div class="input-wrapper">
+                <input class="form-company" type="text" id="company" placeholder="Company title" required>
+                <img class="input-icon" src="../../assets/contact-company.svg" width="32" height="24">
+              </div>
             </div>
+            <textarea class="form-describe" placeholder="Describe your project"></textarea>
             <button class="btn form-btn" type="submit">Get in touch</button>
-
           </form>
         </div>
       </div>
     </div>
   </div>
-
-<!--  <img src="./assets/frame.svg" alt="Rat image" />-->
 </section>
