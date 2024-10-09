@@ -1,2 +1,44 @@
 @import "footer";
 @import "footer-media";
+
+.footer-logo {
+  margin-bottom: 32px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-link {
+  display: inline-block;
+}
+
+.footer-description {
+  max-width: 408px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $neutral200-color;
+  margin-bottom: 192px;
+}
+
+.footer-subtitle {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 138%;
+  color: $primary50-color;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__item-link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 146%;
+  color:$neutral200-color;
+}
