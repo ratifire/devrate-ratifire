@@ -33,6 +33,9 @@
         font-weight: $font-regular;
         font-size: 18px;
         line-height: 26.28px;
+        &:hover {
+          background-color: $primary50-color;
+        }
       }
 
       .home-container-description {
