@@ -1,27 +1,5 @@
-#banner {
-  margin-bottom: 160px;
-}
+@import "banner";
+@import "banner-media";
 
-.banner-container {
-  background-color: $primary90-color;
-  padding: 60px 80px;
-}
-
-.banner-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.banner-title {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 130%;
-  color: $primary30-color;
-}
-
-.banner-strong {
-  color:$white-color;
-}
 
 
