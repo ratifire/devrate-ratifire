@@ -23,13 +23,14 @@
       }
 
       .home-container-btn {
-        width: 164px;
+        box-sizing: border-box;
+        width: 166px;
         margin: 28px 0 32px 0;
         border: 1px solid transparent;
         border-radius: 60px;
         background-color: $primary60-color;
         color: $white-color;
-        padding: 15px 32px;
+        padding: 15px 0;
         font-weight: $font-regular;
         font-size: 18px;
         line-height: 26.28px;
