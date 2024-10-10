@@ -11,13 +11,23 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <div class="video-background">
+      <video autoplay muted loop id="bg-video">
+        <source
+          src="https://204423.fornex.cloud/bg-video1.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="gradient-overlay"></div>
+    </div>
+
     @@include('./components/header.html') @@include('./components/home.html')
 
     <main>
       @@include('./components/about_us.html')
       @@include('./components/advantages.html')
-      @@include('./components/ratifire_team.html')
-      @@include('./components/banner.html')
+      @@include('./components/team.html') @@include('./components/banner.html')
       @@include('./components/contact.html')
     </main>
 

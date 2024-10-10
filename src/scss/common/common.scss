@@ -6,8 +6,10 @@
 }
 
 body {
+  font-family: "Ubuntu", sans-serif;
   background-color: $page-background-color;
   color: $white-color;
+  position: relative;
 }
 
 .container {
@@ -19,6 +21,7 @@ body {
 a {
   text-decoration: none;
   color: $white-color;
+  transition: color 0.3s ease;
   &:hover {
     color: $primary50-color;
   }

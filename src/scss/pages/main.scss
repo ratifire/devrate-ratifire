@@ -1,7 +1,44 @@
 @import "../common/index";
 @import "../components/header/index";
 @import "../components/home/index";
-@import "../common/fonts";
 @import "../components/footer/index";
 @import "../components/banner/index";
 @import "../components/contact/index";
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 888px;
+  overflow: hidden;
+  z-index: 1;
+
+  #bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #0d0d0d 9.64%,
+      rgba(13, 13, 13, 0.5) 33.4%,
+      rgba(13, 13, 13, 0.4) 43.97%,
+      rgba(13, 13, 13, 0.8) 53.18%,
+      #0d0d0d 66.33%
+    );
+    z-index: 1;
+  }
+}

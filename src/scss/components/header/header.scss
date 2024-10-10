@@ -1,17 +1,48 @@
 header {
   height: 80px;
-  background: transparent;
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Ensure header is above the video */
+}
+
+.header-container-logo {
+  margin-right: 15px;
+}
+
+.header-container-brand-name {
+  font-size: 32px;
+  font-weight: $font-medium;
+  line-height: 44.16px;
+  color: $primary50-color;
+  margin: 0 auto;
+}
+
+.header-navbar-links {
+  font-size: 18px;
+  line-height: 26.28px;
+}
+
+.navbar-links-list {
+  margin: 0 auto;
+  padding: 0;
 }
 
 .navbar-link {
-  margin: 0 16px;
+  margin: 0 24px;
 }
 
-.navbar-button {
-  height: 46px;
-  border: 1px solid $transparent-color;
-  border-radius: 8px;
+.header-navbar-button {
+  border: 1px dashed $primary50-color;
+  border-radius: 60px;
+  color: $primary50-color;
   background-color: $transparent-color;
+  font-size: 18px;
+  line-height: 26.28px;
+  padding: 10px 24px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  &:hover {
+    color: $white-color;
+    background-color: $primary50-color;
+  }
 }
