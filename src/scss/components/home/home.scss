@@ -34,6 +34,7 @@
         font-weight: $font-regular;
         font-size: 18px;
         line-height: 26.28px;
+        transition: background-color 0.3s ease;
         &:hover {
           background-color: $primary50-color;
         }

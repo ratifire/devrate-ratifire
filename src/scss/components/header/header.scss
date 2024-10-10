@@ -31,8 +31,18 @@ header {
 }
 
 .header-navbar-button {
-  height: 46px;
-  border: 1px solid $transparent-color;
-  border-radius: 8px;
+  border: 1px dashed $primary50-color;
+  border-radius: 60px;
+  color: $primary50-color;
   background-color: $transparent-color;
+  font-size: 18px;
+  line-height: 26.28px;
+  padding: 10px 24px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  &:hover {
+    color: $white-color;
+    background-color: $primary50-color;
+  }
 }
