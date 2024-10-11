@@ -1,4 +1,4 @@
-#banner {
+.banner {
   margin-bottom: 160px;
 }
 
@@ -12,6 +12,13 @@
   justify-content: space-between;
   align-items: center;
 }
+//slider
+
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .banner-title {
   font-size: 72px;
@@ -20,6 +27,47 @@
   color: $primary30-color;
 }
 
-.banner-strong {
-  color:$white-color;
+.banner-slider {
+  display: inline-block;
+
+  height: 1.5em;
+  overflow: hidden;
+
+  vertical-align: middle;
+
+  mask-image: linear-gradient(transparent, white, white, white, transparent);
+  mask-type: luminance;
+  mask-mode: alpha;
+}
+
+.banner__slider-words {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  animation-name: wordSlider;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+}
+
+.banner__slider-word {
+  display: block;
+  line-height: 1.3em;
+  text-align: left;
+  color: $white-color;
+}
+
+@keyframes wordSlider {
+  $steps: -0%, -25%, -50%, -75%;
+
+  @for $index from 1 through length($steps) {
+    $step: (100 / (length($steps) - 1)) * ($index - 1);
+
+    #{$step}% {
+      transform: translateY(nth($steps, $index));
+    }
+  }
 }

@@ -43,6 +43,7 @@ input, textarea {
   background-color: $transparent-color;
   border-bottom: 1px solid $neutral100-color;
   transition: border-color 0.3s ease;
+  color: $neutral100-color;
 
   &:hover {
     border-color:$primary40-color;
@@ -54,6 +55,8 @@ input, textarea {
   }
 }
 
+
+
 textarea::placeholder,
 input::placeholder {
   font-weight: 400;
@@ -61,7 +64,6 @@ input::placeholder {
   line-height: 146%;
   color: $neutral100-color;
   font-family: 'Inter';
-
 }
 
 /*  add a font to the placeholder */
