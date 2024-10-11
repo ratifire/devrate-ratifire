@@ -18,13 +18,15 @@
 }
 
 .contact-title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 134%;
-  text-transform: uppercase;
+  @include section-title;
+
+  //font-weight: 700;
+  //font-size: 48px;
+  //line-height: 134%;
+  //text-transform: uppercase;
   text-align: center;
-  color: $primary40-color;
-  margin-bottom: 8px;
+  //color: $primary40-color;
+  //margin-bottom: 8px;
 }
 
 .contact-description {
@@ -89,4 +91,8 @@ input::placeholder {
   color: $white-color;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $primary50-color;
+  }
 }
