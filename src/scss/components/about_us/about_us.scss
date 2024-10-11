@@ -6,12 +6,6 @@
     max-width: 462px;
 
     .about_us-title {
-      //font-size: 48px;
-      //font-weight: $font-bold;
-      //line-height: 64.32px;
-      //text-align: left;
-      //color: $primary40-color;
-      //text-transform: uppercase;
       @include section-title;
 
       .about_us-description {
