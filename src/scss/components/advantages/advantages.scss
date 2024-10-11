@@ -1,3 +1,7 @@
+#advantages {
+  margin-bottom: 160px;
+}
+
 .advantages-content {
   max-width: 570px;
 }
@@ -28,19 +32,19 @@
 
 .advantages-item {
   position: relative;
-  margin: 2px;
-  padding: 0.5em 0.5em 0.5em 2em;
+  margin-bottom: 16px;
+  margin-left: 8px;
   &::before {
     content: "";
     position: absolute;
     border-color: $primary70-color;
     border-style: solid;
-    border-width: 0 0.3em 0.25em 0;
-    height: 1em;
-    top: 1.3em;
-    left: 0.6em;
-    margin-top: -1em;
-    transform: rotate(45deg);
-    width: 0.5em;
+    border-width: 9.599px;
+    height: 16px;
+    width: 16px;
+    top: 20px;
+    left: -29px;
+    margin-top: -16px;
+    border-radius: 50%;
   }
 }
