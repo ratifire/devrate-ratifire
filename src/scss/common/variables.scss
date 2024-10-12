@@ -14,3 +14,56 @@ $primary90-color: #041E5D;
 $font-regular: 400;
 $font-medium: 500;
 $font-bold: 700;
+
+//mixin
+
+//styles for the titles
+@mixin primary-title ($color) {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 130%;
+  color: $color;
+}
+
+@mixin secondary-title ($color) {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 134%;
+  text-transform: uppercase;
+  color: $color;
+}
+
+//for paragraph and other similar elements by styles
+ @mixin textBase ($color, $fz, $fw, $lh) {
+   color: $color;
+   font-size: $fz;
+   font-weight: $fw;
+   line-height: $lh;
+ }
+
+// flex
+@mixin flexColum ($justifyContent) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justifyContent;
+}
+
+@mixin flex ($justifyContent) {
+  display: flex;
+  justify-content: $justifyContent;
+}
+
+
+// btn style
+ @mixin btn-primary ($bg, $height, $width) {
+   background-color: $bg;
+   cursor: pointer;
+   height: $height;
+   width: $width;
+   &:hover {
+     background-color: $primary70-color;
+   }
+   &:focus {
+     background-color: $primary40-color;
+   }
+ }

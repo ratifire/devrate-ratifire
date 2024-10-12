@@ -1,81 +1,63 @@
 .footer-content {
-  display: flex;
-  justify-content: space-between;
+  @include flex(space-between);
 }
 
-.footer-logo {
-  margin-bottom: 32px;
+.footer-info {
+  &__logo {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @include textBase($primary50-color, 32px, 500, 138%);
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__description {
+    @include textBase($neutral200-color, 16px, 400, 140%);
+    max-width: 408px;
+    margin-bottom: 192px;
+  }
+
+  &__copy {
+    @include textBase($neutral200-color, 12px, 400, 150%);
+  }
 }
 
-.footer-link {
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 138%;
-  color: $primary50-color;
-  cursor: pointer;
-}
-
-.footer-description {
-  max-width: 408px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: $neutral200-color;
-  margin-bottom: 192px;
-}
-
-.footer-copy {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
-  color: $neutral200-color;
-}
-
-.footer-contact{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.footer-contact {
+  @include flexColum(space-between);
   margin-bottom: 40px;
 }
-.footer-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  padding-left: 0;
+
+.footer-navbar {
+  &__list {
+    @include flex(space-between);
+    gap: 40px;
+    padding-left: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    @include textBase($neutral200-color, 18px, 400, 146%);
+  }
 }
 
-.footer__item-link {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 146%;
-  color:$neutral200-color;
+.footer-social {
+  &__subtitle {
+    @include textBase($white-color, 20px, 500, 110%);
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  &__number,
+  &__email {
+    display: block;
+    @include textBase($white-color, 14px, 400, 160%);
+  }
 }
-
-.footer-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 110%;
-  letter-spacing: -0.01em;
-  margin-bottom: 16px;
-}
-
-.footer-number,
-.footer-email {
-  display: block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 160%;
-  color: $white-color;
-}
-
-
-
 
 //styles for the background image in the footer
-
 //.footer-content {
 //  background-image: url("../../../assets/footer-bg-img.png");
 //  background-repeat: no-repeat;
