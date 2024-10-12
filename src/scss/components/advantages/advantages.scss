@@ -7,7 +7,7 @@
   }
 
   &__image {
-    @include img-blue-line;
+    @extend %img-blue-line;
   }
 
   &__text {

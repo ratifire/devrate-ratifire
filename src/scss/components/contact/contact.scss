@@ -18,7 +18,7 @@
 }
 
 .contact-title {
-  @include section-title-styles;
+  @extend %section-title-styles;
   text-align: center;
 }
 
@@ -70,6 +70,6 @@ input::placeholder {
 }
 
 .form-btn {
-  @extend .button_base;
+  @extend %button_base;
   width: 100%;
 }

@@ -31,7 +31,7 @@
         }
 
         .home-section__button {
-          @extend .button_base;
+          @extend %button_base;
           width: 40%;
         }
 
