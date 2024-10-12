@@ -10,46 +10,40 @@
     color: $white-color;
     text-align: center;
 
-    .home-container-left {
-      width: 413px;
+    .home-section__content {
+      display: flex;
+      justify-content: space-between;
 
-      .home-container-title {
-        margin-top: 40px;
-        font-family: "Montserrat", sans-serif;
-        text-align: left;
-        font-size: 72px;
-        font-weight: $font-bold;
-        line-height: 93.6px;
-      }
+      .home-section__content-text {
+        display: flex;
+        flex-direction: column;
+        width: 413px;
 
-      .home-container-btn {
-        box-sizing: border-box;
-        width: 166px;
-        margin: 28px 0 32px 0;
-        border: 1px solid transparent;
-        border-radius: 60px;
-        background-color: $primary60-color;
-        color: $white-color;
-        padding: 15px 0;
-        font-weight: $font-regular;
-        font-size: 18px;
-        line-height: 26.28px;
-        transition: background-color 0.3s ease;
-        &:hover {
-          background-color: $primary50-color;
+        .home-section__title {
+          margin-top: 40px;
+          font-family: "Montserrat", sans-serif;
+          text-align: left;
+          font-size: 72px;
+          font-weight: $font-bold;
+          line-height: 93.6px;
+        }
+
+        .home-section__button {
+          @include get-in-touch-btn;
+
+          width: 40%;
+        }
+
+        .home-section__description {
+          @include regular-text;
+          font-size: 18px;
+          line-height: 26.28px;
         }
       }
 
-      .home-container-description {
-        font-weight: $font-regular;
-        font-size: 18px;
-        line-height: 26.28px;
-        text-align: left;
+      .home-section__image {
+        margin-top: -55px;
       }
-    }
-
-    .home-container-img {
-      margin-top: -55px;
     }
   }
 }

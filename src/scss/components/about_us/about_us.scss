@@ -1,22 +1,23 @@
-.about_us-container {
+.about-us__content {
+  display: flex;
+  justify-content: space-between;
   margin-top: 162px;
   margin-bottom: 160px;
 
-  .about_us-content {
+  .about-us__text {
+    display: flex;
+    flex-direction: column;
     max-width: 462px;
 
-    .about_us-title {
+    .about-us__title {
       @include section-title;
 
-      .about_us-description {
-        margin-bottom: 8px;
-        font-size: 16px;
-        font-weight: $font-regular;
-        line-height: 24px;
+      .about-us__description {
+        @include regular-text;
       }
     }
   }
-  .about_us-img {
+  .about-us__image {
     position: relative;
 
     &::before {

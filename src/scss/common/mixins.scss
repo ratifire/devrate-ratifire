@@ -8,3 +8,27 @@
   margin-top: 20px;
   margin-bottom: 16px;
 }
+
+@mixin get-in-touch-btn {
+  margin: 28px 0 32px 0;
+  border: 1px solid transparent;
+  border-radius: 60px;
+  background-color: $primary60-color;
+  color: $white-color;
+  padding: 15px 0;
+  font-weight: $font-regular;
+  font-size: 18px;
+  line-height: 146%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $primary50-color;
+  }
+}
+
+@mixin regular-text {
+  font-size: 16px;
+  font-weight: $font-regular;
+  line-height: 150%;
+  text-align: left;
+}
