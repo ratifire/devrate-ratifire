@@ -18,10 +18,6 @@
   }
   .about_us-img {
     position: relative;
-    width: 738px;
-    height: 416px;
-    background-color: $primary40-color;
-    box-shadow: 0 0 5px $primary40-color;
 
     &::before {
       content: "";
