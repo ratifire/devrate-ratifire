@@ -31,7 +31,7 @@
         }
 
         .home-section__button {
-          @include get-in-touch-btn;
+          @extend .button_base;
           width: 40%;
         }
 

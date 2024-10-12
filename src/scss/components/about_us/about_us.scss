@@ -13,7 +13,7 @@
     max-width: 462px;
 
     .about-us__title {
-      @include section-title;
+      @include section-title-styles;
 
       .about-us__description {
         @include text-format;
