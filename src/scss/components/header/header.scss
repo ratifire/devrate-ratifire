@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
 
-  .header__container {
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,16 +16,8 @@
       flex-direction: row;
       align-items: center;
 
-      .header__logo {
-        margin-right: 15px;
-      }
-
-      .header__brand-name {
-        font-size: 32px;
-        font-weight: $font-medium;
-        line-height: 44.16px;
-        color: $primary50-color;
-        margin: 0 auto;
+      &-name {
+        @include brand_name($arg: header);
       }
     }
 
@@ -33,7 +25,7 @@
       font-size: 18px;
       line-height: 26.28px;
 
-      .header__navbar-list {
+      &-list {
         margin: 0 auto;
         padding: 0;
 

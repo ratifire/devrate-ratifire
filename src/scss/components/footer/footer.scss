@@ -1,38 +1,64 @@
-.footer-content {
+.footer__content {
   display: flex;
   justify-content: space-between;
 }
 
-.footer-logo {
+//.footer__logo-img {
+//  display: inline-block;
+//}
+//
+//.footer__logo {
+//  display: flex;
+//  flex-direction: row;
+//  align-items: center;
+//  margin-bottom: 32px;
+//}
+//
+//.footer__logo-text {
+//  display: inline-block;
+//  font-size: 32px;
+//  font-weight: $font-medium;
+//  line-height: 44.16px;
+//  color: $primary50-color;
+//  margin: 0 auto;
+//}
+
+.footer__brand {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 32px;
+
+  &-name {
+    @include brand_name($arg: footer);
+  }
 }
 
-.footer-link {
+.footer__link {
   color: $primary50-color;
   cursor: pointer;
 }
 
-.footer-description {
+.footer__description {
   @include regular-text;
   max-width: 408px;
   color: $neutral200-color;
   margin-bottom: 192px;
 }
 
-.footer-copy {
+.footer__copy {
   @include regular-text;
   font-size: 12px;
   color: $neutral200-color;
 }
 
-.footer-contact {
+.footer__contact {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 40px;
 }
 
-.footer-list {
+.footer__list {
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -47,7 +73,7 @@
   color: $neutral200-color;
 }
 
-.footer-subtitle {
+.footer__subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 110%;
@@ -55,8 +81,8 @@
   margin-bottom: 16px;
 }
 
-.footer-number,
-.footer-email {
+.footer__number,
+.footer__email {
   display: block;
   font-weight: 400;
   font-size: 14px;

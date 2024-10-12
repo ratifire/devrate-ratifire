@@ -1,52 +1,41 @@
-//#advantages {
-//  margin-bottom: 160px;
-//}
+.advantages {
+  margin-bottom: 160px;
 
-.advantages__content {
-  display: flex;
-  justify-content: space-between;
-
-  .advantages__image {
-    position: relative;
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: $primary70-color;
-      top: 16px;
-      left: -16px;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+  &__content {
+    display: flex;
+    justify-content: space-between;
   }
-  .advantages__text {
+
+  &__image {
+    @include img-blue-line;
+  }
+
+  &__text {
     display: flex;
     flex-direction: column;
     max-width: 570px;
+  }
 
-    .advantages__title {
-      @include section-title;
-    }
+  &__title {
+    @include section-title;
+  }
 
-    .advantages__item {
-      position: relative;
-      margin-bottom: 16px;
-      margin-left: 8px;
-      &::before {
-        content: "";
-        position: absolute;
-        border-color: $primary70-color;
-        border-style: solid;
-        border-width: 9.599px;
-        height: 15px;
-        width: 15px;
-        top: 17px;
-        left: -29px;
-        margin-top: -16px;
-        border-radius: 50%;
-      }
+  &__item {
+    position: relative;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    &::before {
+      content: "";
+      position: absolute;
+      border-color: $primary70-color;
+      border-style: solid;
+      border-width: 9.599px;
+      height: 15px;
+      width: 15px;
+      top: 17px;
+      left: -29px;
+      margin-top: -16px;
+      border-radius: 50%;
     }
   }
 }
