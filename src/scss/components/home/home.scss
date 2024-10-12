@@ -20,12 +20,14 @@
         width: 413px;
 
         .home-section__title {
+          @include text-format(
+            $font-size: 72px,
+            $line-height: 130%,
+            $font-weight: $font-bold,
+            $font-family: "Montserrat"
+          );
+
           margin-top: 40px;
-          font-family: "Montserrat", sans-serif;
-          text-align: left;
-          font-size: 72px;
-          font-weight: $font-bold;
-          line-height: 93.6px;
         }
 
         .home-section__button {
@@ -34,9 +36,7 @@
         }
 
         .home-section__description {
-          @include regular-text;
-          font-size: 18px;
-          line-height: 26.28px;
+          @include text-format($font-size: 18px, $line-height: 146%);
         }
       }
 

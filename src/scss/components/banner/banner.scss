@@ -11,10 +11,12 @@
       align-items: center;
 
       .banner__title {
-        font-size: 72px;
-        font-weight: $font-bold;
-        line-height: 130%;
-        color: $primary30-color;
+        @include text-format(
+          $font-size: 72px,
+          $line-height: 130%,
+          $font-weight: $font-bold,
+          $font-family: "Montserrat"
+        );
 
         .banner__strong {
           color: $white-color;

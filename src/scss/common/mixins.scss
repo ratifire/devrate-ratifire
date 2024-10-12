@@ -26,11 +26,19 @@
   }
 }
 
-@mixin regular-text {
-  font-size: 16px;
-  font-weight: $font-regular;
-  line-height: 150%;
+@mixin text-format(
+  $font-size: 16px,
+  $font-weight: normal,
+  $line-height: 150%,
+  $font-family: "Ubuntu",
+  $color: $white-color
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
   text-align: left;
+  color: $color;
 }
 
 @mixin img-blue-line {

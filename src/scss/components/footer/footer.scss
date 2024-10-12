@@ -3,26 +3,6 @@
   justify-content: space-between;
 }
 
-//.footer__logo-img {
-//  display: inline-block;
-//}
-//
-//.footer__logo {
-//  display: flex;
-//  flex-direction: row;
-//  align-items: center;
-//  margin-bottom: 32px;
-//}
-//
-//.footer__logo-text {
-//  display: inline-block;
-//  font-size: 32px;
-//  font-weight: $font-medium;
-//  line-height: 44.16px;
-//  color: $primary50-color;
-//  margin: 0 auto;
-//}
-
 .footer__brand {
   display: flex;
   flex-direction: row;
@@ -39,16 +19,13 @@
 }
 
 .footer__description {
-  @include regular-text;
+  @include text-format($color: $neutral200-color);
   max-width: 408px;
-  color: $neutral200-color;
   margin-bottom: 192px;
 }
 
 .footer__copy {
-  @include regular-text;
-  font-size: 12px;
-  color: $neutral200-color;
+  @include text-format($font-size: 12px, $color: $neutral200-color);
 }
 
 .footer__contact {
@@ -67,16 +44,20 @@
 
 .footer__item-link {
   display: inline-block;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 146%;
-  color: $neutral200-color;
+  @include text-format(
+    $font-size: 18px,
+    $line-height: 146%,
+    $color: $neutral200-color
+  );
 }
 
 .footer__subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 110%;
+  @include text-format(
+    $font-size: 20px,
+    $line-height: 110%,
+    $font-weight: $font-bold
+  );
+
   letter-spacing: -0.01em;
   margin-bottom: 16px;
 }
@@ -84,10 +65,7 @@
 .footer__number,
 .footer__email {
   display: block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 160%;
-  color: $white-color;
+  @include text-format($font-size: 14px, $line-height: 160%);
 }
 
 //styles for the background image in the footer

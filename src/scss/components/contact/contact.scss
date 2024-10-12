@@ -23,7 +23,7 @@
 }
 
 .contact-description {
-  @include regular-text;
+  @include text-format;
   margin-bottom: 20px;
 }
 
@@ -39,10 +39,11 @@ textarea {
 
 textarea::placeholder,
 input::placeholder {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 146%;
-  color: $neutral100-color;
+  @include text-format(
+    $font-size: 18px,
+    $line-height: 146%,
+    $color: $neutral200-color
+  );
 }
 /*  add a font to the placeholder */
 

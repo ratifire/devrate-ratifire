@@ -16,7 +16,7 @@
       @include section-title;
 
       .about-us__description {
-        @include regular-text;
+        @include text-format;
       }
     }
   }
