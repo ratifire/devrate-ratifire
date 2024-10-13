@@ -1,0 +1,81 @@
+#contact {
+  margin-bottom: 160px;
+}
+
+.contact__img-wrapper {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.contact__form-wrapper {
+  width: 522px;
+}
+
+.contact__content {
+  @include flexRow($justifyContent: space-between);
+  gap: 100px;
+}
+
+.contact__title {
+  @extend %sectionTitle;
+  text-align: center;
+}
+
+.contact__description {
+  @include textBase;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: none;
+  background-color: $transparent-color;
+  border-bottom: 1px solid $neutral100-color;
+  transition: border-color 0.3s ease;
+  color: $neutral100-color;
+
+  &:hover {
+    border-color: $primary40-color;
+  }
+  &:focus {
+    outline: none;
+    border-color: $primary60-color;
+    background-color: transparent;
+  }
+}
+
+textarea::placeholder,
+input::placeholder {
+  @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
+}
+/*  add a font to the placeholder */
+
+.form__input-user,
+.form__input-email,
+.form__input-company {
+  padding-left: 35px;
+}
+
+.form__input-wrapper {
+  position: relative;
+}
+
+.form__input-icon {
+  position: absolute;
+  top: 11px;
+  left: 0;
+}
+
+.form__describe {
+  min-width: 522px;
+  height: 140px;
+  resize: vertical;
+}
+
+.form__btn {
+  @extend %buttonBase;
+  width: 100%;
+}

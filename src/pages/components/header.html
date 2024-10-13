@@ -1,33 +1,32 @@
-<header id="header" class="d-flex justify-content-between align-items-center">
+<header class="header">
   <div class="container">
-    <div
-      class="header-container d-flex justify-content-between align-items-center"
-    >
-      <div class="d-flex flex-row align-items-center">
-        <img
-          src="./assets/ratifire_logo.svg"
-          class="header-container-logo"
-          alt="Ratifire Logo"
-        />
-        <a href="https://www.ratifire.org"
-          ><p class="header-container-brand-name">Ratifire</p></a
+    <div class="header__container">
+      <div class="header__brand">
+        <a href="#" class="header__brand-name"
+          ><img
+            src="./assets/logo/ratifire_logo.svg"
+            class="header__logo"
+            alt="Ratifire Logo"
+          /><span>Ratifire</span></a
         >
       </div>
 
-      <nav class="header-navbar-links" aria-label="Main Navigation">
-        <ul class="navbar-links-list d-flex align-items-center">
-          <a href="#about_us" class="navbar-link"><li>About us</li></a>
-          <a href="#contact" class="navbar-link"><li>Contacts</li></a>
-          <a href="#team" class="navbar-link"> <li>Team</li></a>
+      <nav class="header__navbar" aria-label="Main Navigation">
+        <ul class="header__navbar-list">
+          <li class="header__navbar-item">
+            <a href="#about_us" class="header__navbar-link">About us</a>
+          </li>
+          <li class="header__navbar-item">
+            <a href="#contact" class="header__navbar-link">Contacts</a>
+          </li>
+          <li class="header__navbar-item">
+            <a href="#team" class="header__navbar-link">Team</a>
+          </li>
         </ul>
       </nav>
 
       <a href="#contact">
-        <button
-          class="header-navbar-button"
-          type="button"
-          aria-label="Contact us"
-        >
+        <button class="header__button" type="button" aria-label="Contact us">
           Contact us
         </button>
       </a>

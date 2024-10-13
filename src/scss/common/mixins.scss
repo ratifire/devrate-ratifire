@@ -1,0 +1,39 @@
+@mixin textBase(
+  $color: $white-color,
+  $fz: 16px,
+  $fw: $font-regular,
+  $lh: 150%,
+  $ff: "Ubuntu"
+) {
+  color: $color;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $ff;
+  text-align: left;
+}
+
+@mixin flexRow($justifyContent: flex-start, $alignItems: stretch) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin flexColumn($justifyContent: flex-start, $alignItems: stretch) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin brand_name($arg) {
+  font-size: 32px;
+  font-weight: $font-medium;
+  line-height: 44.16px;
+  color: $primary50-color;
+
+  .#{$arg}__logo {
+    margin-right: 15px;
+  }
+}

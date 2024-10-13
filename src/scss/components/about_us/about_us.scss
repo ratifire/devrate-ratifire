@@ -1,0 +1,25 @@
+.about-us {
+  margin-top: 162px;
+  margin-bottom: 160px;
+
+  &__content {
+    @include flexRow($justifyContent: space-between);
+  }
+
+  &__text {
+    @include flexColumn;
+    max-width: 462px;
+
+    .about-us__title {
+      @extend %sectionTitle;
+
+      .about-us__description {
+        @include textBase;
+      }
+    }
+  }
+
+  &__image {
+    @extend %imageBlueLine;
+  }
+}

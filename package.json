@@ -24,6 +24,9 @@
     "sass": "^1.69.5"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2"
+    "bootstrap": "^5.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "swiper": "^11.1.14"
   }
 }

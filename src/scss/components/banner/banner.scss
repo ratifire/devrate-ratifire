@@ -1,1 +1,81 @@
+.banner {
+  margin-bottom: 160px;
+}
 
+.banner__container {
+  background-color: $primary90-color;
+  padding: 60px 80px;
+}
+
+//slider animation words
+.banner__content {
+  @include flexRow(space-between);
+  align-items: center;
+
+  &-wrapper {
+    @include flexColumn(center);
+  }
+
+  &-title {
+    @include textBase(
+      $fz: 72px,
+      $fw: $font-bold,
+      $lh: 130%,
+      $color: $primary30-color
+    );
+  }
+}
+
+.banner__slider {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+  vertical-align: middle;
+
+  &-words {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation: wordSlider 6s ease-in-out infinite;
+    position: relative;
+  }
+
+  &-word {
+    display: block;
+    line-height: 1.3em;
+    text-align: left;
+    color: $white-color;
+    white-space: nowrap;
+  }
+}
+
+@keyframes wordSlider {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+//@keyframes wordSlider {
+//  $steps: -0%, -25%, -50%, -75%;
+//
+//  @for $index from 1 through length($steps) {
+//    $step: (100 / (length($steps) - 1)) * ($index - 1);
+//
+//    #{$step}% {
+//      transform: translateY(nth($steps, $index));
+//    }
+//  }
+//}
