@@ -4,6 +4,9 @@ const fileinclude = require("gulp-file-include");
 const clean = require("gulp-clean");
 const server = require("gulp-server-livereload");
 const fs = require("fs");
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const sourcemaps = require('gulp-sourcemaps');
 
 const startServer = () => {
   return gulp.src("./dist/").pipe(
@@ -34,9 +37,25 @@ const htmlCompile = () => {
 
 const scssCompile = () => {
   return gulp
-    .src("./src/scss/pages/*.scss")
+    .src([
+      "./src/scss/pages/*.scss",
+      './node_modules/swiper/swiper-bundle.min.css'
+    ])
     .pipe(sass())
     .pipe(gulp.dest("./dist/css/"));
+};
+
+const scriptCompile = () => {
+  return gulp
+    .src([
+      'node_modules/swiper/swiper-bundle.js',
+      './src/js/*.js'
+    ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/js'));
 };
 
 const images = () => {
@@ -59,6 +78,11 @@ const watchers = () => {
     gulp.parallel(scssCompile),
   );
   gulp.watch(
+    "./src/js/**/*",
+    { events: "change" },
+    gulp.parallel(scriptCompile)
+  );
+  gulp.watch(
     "./src/assets/**/*",
     { events: ["add", "unlink"] },
     gulp.parallel(images),
@@ -77,6 +101,6 @@ const watchers = () => {
 
 exports.default = gulp.series(
   cleanFiles,
-  gulp.parallel(htmlCompile, scssCompile, images, videos, fonts),
+  gulp.parallel(htmlCompile, scssCompile, scriptCompile, images, videos, fonts),
   gulp.parallel(startServer, watchers),
 );
