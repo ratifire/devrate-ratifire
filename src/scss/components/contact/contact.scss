@@ -2,28 +2,27 @@
   margin-bottom: 160px;
 }
 
-.contact-img {
+.contact__img-wrapper {
   object-fit: cover;
   overflow: hidden;
 }
 
-.contact-form {
+.contact__form-wrapper {
   width: 522px;
 }
 
-.contact-content {
-  display: flex;
-  justify-content: space-between;
+.contact__content {
+  @include flexRow($justifyContent: space-between);
   gap: 100px;
 }
 
-.contact-title {
-  @extend %section-title-styles;
+.contact__title {
+  @extend %sectionTitle;
   text-align: center;
 }
 
-.contact-description {
-  @include text-format;
+.contact__description {
+  @include textBase;
   margin-bottom: 20px;
 }
 
@@ -35,41 +34,48 @@ textarea {
   border: none;
   background-color: $transparent-color;
   border-bottom: 1px solid $neutral100-color;
+  transition: border-color 0.3s ease;
+  color: $neutral100-color;
+
+  &:hover {
+    border-color: $primary40-color;
+  }
+  &:focus {
+    outline: none;
+    border-color: $primary60-color;
+    background-color: transparent;
+  }
 }
 
 textarea::placeholder,
 input::placeholder {
-  @include text-format(
-    $font-size: 18px,
-    $line-height: 146%,
-    $color: $neutral200-color
-  );
+  @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
 }
 /*  add a font to the placeholder */
 
-.form-user,
-.form-email,
-.form-company {
+.form__input-user,
+.form__input-email,
+.form__input-company {
   padding-left: 35px;
 }
 
-.input-wrapper {
+.form__input-wrapper {
   position: relative;
 }
 
-.input-icon {
+.form__input-icon {
   position: absolute;
   top: 11px;
   left: 0;
 }
 
-.form-describe {
+.form__describe {
   min-width: 522px;
   height: 140px;
   resize: vertical;
 }
 
-.form-btn {
-  @extend %button_base;
+.form__btn {
+  @extend %buttonBase;
   width: 100%;
 }

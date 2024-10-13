@@ -11,32 +11,29 @@
     text-align: center;
 
     .home-section__content {
-      display: flex;
-      justify-content: space-between;
+      @include flexRow($justifyContent: space-between);
 
       .home-section__content-text {
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         width: 413px;
 
         .home-section__title {
-          @include text-format(
-            $font-size: 72px,
-            $line-height: 130%,
-            $font-weight: $font-bold,
-            $font-family: "Montserrat"
+          @include textBase(
+            $fz: 72px,
+            $lh: 130%,
+            $fw: $font-bold,
+            $ff: "Montserrat"
           );
-
           margin-top: 40px;
         }
 
         .home-section__button {
-          @extend %button_base;
+          @extend %buttonBase;
           width: 40%;
         }
 
         .home-section__description {
-          @include text-format($font-size: 18px, $line-height: 146%);
+          @include textBase($fz: 18px, $lh: 146%);
         }
       }
 

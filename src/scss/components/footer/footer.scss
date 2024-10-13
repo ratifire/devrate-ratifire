@@ -1,11 +1,9 @@
 .footer__content {
-  display: flex;
-  justify-content: space-between;
+  @include flexRow($justifyContent: space-between);
 }
 
 .footer__brand {
-  display: flex;
-  flex-direction: row;
+  @include flexRow;
   margin-bottom: 32px;
 
   &-name {
@@ -19,45 +17,33 @@
 }
 
 .footer__description {
-  @include text-format($color: $neutral200-color);
+  @include textBase($color: $neutral200-color);
   max-width: 408px;
   margin-bottom: 192px;
 }
 
 .footer__copy {
-  @include text-format($font-size: 12px, $color: $neutral200-color);
+  @include textBase($fz: 12px, $color: $neutral200-color);
 }
 
 .footer__contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flexColumn($justifyContent: space-between);
   margin-bottom: 40px;
 }
 
 .footer__list {
-  display: flex;
-  justify-content: space-between;
+  @include flexRow($justifyContent: space-between);
   gap: 40px;
   padding-left: 0;
 }
 
 .footer__item-link {
   display: inline-block;
-  @include text-format(
-    $font-size: 18px,
-    $line-height: 146%,
-    $color: $neutral200-color
-  );
+  @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
 }
 
 .footer__subtitle {
-  @include text-format(
-    $font-size: 20px,
-    $line-height: 110%,
-    $font-weight: $font-bold
-  );
-
+  @include textBase($fz: 20px, $lh: 110%, $fw: $font-bold);
   letter-spacing: -0.01em;
   margin-bottom: 16px;
 }
@@ -65,7 +51,7 @@
 .footer__number,
 .footer__email {
   display: block;
-  @include text-format($font-size: 14px, $line-height: 160%);
+  @include textBase($fz: 14px, $lh: 160%);
 }
 
 //styles for the background image in the footer

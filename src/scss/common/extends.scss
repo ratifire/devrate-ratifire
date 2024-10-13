@@ -1,4 +1,4 @@
-%button_base {
+%buttonBase {
   margin: 28px 0 32px 0;
   border: 1px solid transparent;
   border-radius: 60px;
@@ -11,11 +11,15 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $primary50-color;
+    background-color: $primary70-color;
+  }
+
+  &:focus {
+    background-color: $primary40-color;
   }
 }
 
-%section-title-styles {
+%sectionTitle {
   font-size: 48px;
   font-weight: $font-bold;
   line-height: 134%;
@@ -26,7 +30,7 @@
   margin-bottom: 16px;
 }
 
-%img-blue-line {
+%imageBlueLine {
   position: relative;
 
   &::before {

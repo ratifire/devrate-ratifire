@@ -2,19 +2,13 @@
   height: 80px;
   position: relative;
   z-index: 2; /* Ensure header is above the video */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flexRow($justifyContent: space-between, $alignItems: center);
 
   &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexRow($justifyContent: space-between, $alignItems: center);
 
     .header__brand {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      @include flexRow($alignItems: center);
 
       &-name {
         @include brand_name($arg: header);
@@ -46,9 +40,14 @@
       transition:
         background-color 0.3s ease,
         color 0.3s ease;
+
       &:hover {
         color: $white-color;
-        background-color: $primary50-color;
+        background-color: $primary70-color;
+      }
+
+      &:focus {
+        background-color: $primary40-color;
       }
     }
   }
