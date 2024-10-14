@@ -45,14 +45,35 @@ const scssCompile = () => {
     .pipe(gulp.dest("./dist/css/"));
 };
 
-const scriptCompile = () => {
-  return gulp
-    .src(["node_modules/swiper/swiper-bundle.js", "./src/js/*.js"])
-    .pipe(sourcemaps.init())
-    .pipe(concat("main.min.js"))
+const compileJs = (src, dest, concatName = null) => {
+  let stream = gulp.src(src).pipe(sourcemaps.init());
+
+  if (concatName) {
+    stream = stream.pipe(concat(concatName));
+  }
+
+  return stream
     .pipe(uglify())
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./dist/js"));
+    .pipe(gulp.dest(dest));
+};
+
+const compileMainJs = () => {
+  return compileJs(
+    ["node_modules/swiper/swiper-bundle.js", "./src/js/*.js"],
+    "./dist/js",
+    "main.min.js",
+  );
+};
+
+const compileAnimationJs = () => {
+  return compileJs(
+    [
+      "./src/js/animation/animation.js",
+      "node_modules/particles.js/particles.js",
+    ],
+    "./dist/js/animation",
+  );
 };
 
 const images = () => {
@@ -75,9 +96,8 @@ const watchers = () => {
     gulp.parallel(scssCompile),
   );
   gulp.watch(
-    "./src/js/**/*",
-    { events: "change" },
-    gulp.parallel(scriptCompile),
+    "./src/js/**/*.js",
+    gulp.series(compileMainJs, compileAnimationJs),
   );
   gulp.watch(
     "./src/assets/**/*",
@@ -98,6 +118,14 @@ const watchers = () => {
 
 exports.default = gulp.series(
   cleanFiles,
-  gulp.parallel(htmlCompile, scssCompile, scriptCompile, images, videos, fonts),
+  gulp.parallel(
+    htmlCompile,
+    scssCompile,
+    compileMainJs,
+    compileAnimationJs,
+    images,
+    videos,
+    fonts,
+  ),
   gulp.parallel(startServer, watchers),
 );

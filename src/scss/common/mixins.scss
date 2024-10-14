@@ -14,23 +14,20 @@
 }
 
 @mixin flexRow($justifyContent: flex-start, $alignItems: stretch) {
-  display: flex;
-  flex-direction: row;
+  @extend %flexRow;
   justify-content: $justifyContent;
   align-items: $alignItems;
 }
 
 @mixin flexColumn($justifyContent: flex-start, $alignItems: stretch) {
-  display: flex;
-  flex-direction: column;
+  @extend %flexColumn;
   justify-content: $justifyContent;
   align-items: $alignItems;
 }
 
 @mixin brand_name($arg) {
-  font-size: 32px;
+  @extend %brand_name;
   font-weight: $font-medium;
-  line-height: 44.16px;
   color: $primary50-color;
 
   .#{$arg}__logo {

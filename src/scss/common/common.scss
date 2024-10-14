@@ -10,6 +10,8 @@ body {
   background-color: $page-background-color;
   color: $white-color;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -21,15 +23,6 @@ body {
 a {
   text-decoration: none;
   color: $white-color;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $primary70-color;
-  }
-
-  &:focus {
-    background-color: $primary40-color;
-  }
 }
 
 li {
