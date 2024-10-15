@@ -16,8 +16,7 @@
     }
 
     .header__navbar {
-      font-size: 18px;
-      line-height: 26.28px;
+      @include textBase($fz: 18px, $lh: 146%);
 
       &-list {
         margin: 0 auto;
@@ -34,14 +33,11 @@
     }
 
     .header__button {
-      box-sizing: border-box;
+      @include textBase($color: $primary50-color, $lh: 146%, $fz: 18px);
       background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='25' ry='25' stroke='%23608EFFFF' stroke-width='2' stroke-dasharray='20' stroke-dashoffset='6' stroke-linecap='butt'/%3e%3c/svg%3e");
       border-radius: 25px;
       border: none;
-      color: $primary50-color;
       background-color: $transparent-color;
-      font-size: 18px;
-      line-height: 146%;
       padding: 9px 25px;
       transition:
         background-color 0.3s ease,
