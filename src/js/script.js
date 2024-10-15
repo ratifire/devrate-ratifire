@@ -1,6 +1,6 @@
 const teamSwiperBlock = new Swiper(".team-swiper", {
   direction: "horizontal",
-  slidesPerView: 1,
+  slidesPerView: 4,
   loop: false,
   spaceBetween: 20,
 

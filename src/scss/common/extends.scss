@@ -45,3 +45,30 @@
     z-index: -1;
   }
 }
+
+%flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+%brand_name {
+  font-size: 32px;
+  line-height: 44.16px;
+}
+
+%link {
+  color: $white-color;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $primary70-color;
+  }
+
+  &:focus {
+    background-color: $primary40-color;
+  }
+}

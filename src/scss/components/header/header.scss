@@ -25,6 +25,10 @@
 
         .header__navbar-item {
           margin: 0 24px;
+
+          .header__navbar-link {
+            @extend %link;
+          }
         }
       }
     }

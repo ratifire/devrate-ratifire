@@ -40,6 +40,7 @@
 .footer__item-link {
   display: inline-block;
   @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
+  @extend %link;
 }
 
 .footer__subtitle {
@@ -52,6 +53,7 @@
 .footer__email {
   display: block;
   @include textBase($fz: 14px, $lh: 160%);
+  @extend %link;
 }
 
 //styles for the background image in the footer
