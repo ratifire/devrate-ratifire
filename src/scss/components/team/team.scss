@@ -39,32 +39,15 @@
 }
 
 .team-btn {
-  position: relative;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='95' ry='95' stroke='%23608EFFFF' stroke-width='4' stroke-dasharray='40%25%2c 40%25' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 100px;
+  padding: 10px;
 
   &__link {
     text-decoration: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     border-radius: 60px;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    top: 1px;
-    left: -1px;
-    bottom: 0;
-    position: absolute;
-    border: 2px solid #4a90e2;
-    border-radius: 60px;
-    width: 44px;
-    height: 44px;
-    box-sizing: border-box;
-  }
-
-  &::after {
-    border-left-color: transparent;
-    border-right-color: transparent;
   }
 }
 

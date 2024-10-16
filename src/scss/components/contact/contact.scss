@@ -5,6 +5,7 @@
 .contact__img-wrapper {
   object-fit: cover;
   overflow: hidden;
+  box-shadow: -15px 10px 0px 0px $primary90-color;
 }
 
 .contact__form-wrapper {
@@ -28,30 +29,14 @@
 
 input,
 textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border: none;
-  background-color: $transparent-color;
-  border-bottom: 1px solid $neutral100-color;
-  transition: border-color 0.3s ease;
-  color: $neutral100-color;
-
-  &:hover {
-    border-color: $primary40-color;
-  }
-  &:focus {
-    outline: none;
-    border-color: $primary60-color;
-    background-color: transparent;
-  }
+  @extend %input_style;
 }
 
 textarea::placeholder,
 input::placeholder {
   @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
 }
-/*  add a font to the placeholder */
+
 
 .form__input-user,
 .form__input-email,
@@ -72,7 +57,7 @@ input::placeholder {
 .form__describe {
   min-width: 522px;
   height: 140px;
-  resize: vertical;
+  resize: none;
 }
 
 .form__btn {
