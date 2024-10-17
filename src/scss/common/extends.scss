@@ -69,6 +69,26 @@
   }
 
   &:focus {
-    background-color: $primary40-color;
+    color: $primary40-color;
+  }
+}
+
+%input_style {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: none;
+  background-color: $transparent-color;
+  border-bottom: 1px solid $neutral100-color;
+  transition: border-color 0.3s ease;
+  color: $neutral100-color;
+
+  &:hover {
+    border-color: $primary40-color;
+  }
+  &:focus {
+    outline: none;
+    border-color: $primary60-color;
+    background-color: transparent;
   }
 }

@@ -2,7 +2,7 @@ const teamSwiperBlock = new Swiper(".team-swiper", {
   direction: "horizontal",
   slidesPerView: 4,
   loop: false,
-  spaceBetween: 20,
+  spaceBetween: 15,
 
   navigation: {
     nextEl: ".swiper-button-next",

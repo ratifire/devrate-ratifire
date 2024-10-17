@@ -1,81 +1,96 @@
-#contact {
+.contact {
   margin-bottom: 160px;
+
+  &__container {
+  }
+
+  &__content {
+    @include flexRow($justifyContent: space-between);
+    gap: 100px;
+  }
+
+  &__img-wrapper {
+    //box-shadow: -15px 10px 0px 0px $primary90-color;
+  }
+
+  &__form-wrapper {
+    width: 522px;
+  }
+
+  &__title {
+    @extend %sectionTitle;
+    text-align: center;
+  }
+
+  &__description {
+    @include textBase;
+    margin-bottom: 20px;
+  }
 }
 
-.contact__img-wrapper {
+.contact-img {
+
   object-fit: cover;
-  overflow: hidden;
+  box-shadow: -15px 10px 0px 0px $primary90-color;
 }
 
-.contact__form-wrapper {
-  width: 522px;
-}
-
-.contact__content {
-  @include flexRow($justifyContent: space-between);
-  gap: 100px;
-}
-
-.contact__title {
-  @extend %sectionTitle;
-  text-align: center;
-}
-
-.contact__description {
-  @include textBase;
-  margin-bottom: 20px;
-}
 
 input,
 textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border: none;
-  background-color: $transparent-color;
-  border-bottom: 1px solid $neutral100-color;
-  transition: border-color 0.3s ease;
-  color: $neutral100-color;
-
-  &:hover {
-    border-color: $primary40-color;
-  }
-  &:focus {
-    outline: none;
-    border-color: $primary60-color;
-    background-color: transparent;
-  }
+  @extend %input_style;
 }
 
 textarea::placeholder,
 input::placeholder {
   @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
 }
-/*  add a font to the placeholder */
 
-.form__input-user,
-.form__input-email,
-.form__input-company {
-  padding-left: 35px;
+
+.form {
+
+  &__container {
+  }
+
+  &__input-wrapper {
+    position: relative;
+  }
+
+  &__input-user,
+  &__input-email,
+  &__input-company {
+    padding-left: 35px;
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 11px;
+    left: 0;
+  }
+
+  &__describe {
+    min-width: 522px;
+    height: 140px;
+    resize: none;
+  }
+
+  &__btn {
+    @extend %buttonBase;
+    width: 100%;
+  }
 }
 
-.form__input-wrapper {
-  position: relative;
+//breakpoints
+@media (max-width: $breakpoint-xl) {
+  .contact-img {
+    width: 480px;
+    height: 550px;
+  }
 }
 
-.form__input-icon {
-  position: absolute;
-  top: 11px;
-  left: 0;
-}
+@media (max-width: $breakpoint-lg) {
+  .contact-img {
+    width: 300px;
+    height: 350px;
+  }
 
-.form__describe {
-  min-width: 522px;
-  height: 140px;
-  resize: vertical;
-}
-
-.form__btn {
-  @extend %buttonBase;
-  width: 100%;
 }
