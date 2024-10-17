@@ -1,8 +1,11 @@
-.footer__container {
+.footer {
   background-image: url("../../../assets/footer/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.footer__container {
   padding: 40px 0;
 }
 .footer__content {
