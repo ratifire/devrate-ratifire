@@ -56,7 +56,7 @@
   flex-direction: column;
 }
 
-%brand_name {
+%brandName {
   font-size: 32px;
   line-height: 44.16px;
 }
@@ -90,5 +90,17 @@
     outline: none;
     border-color: $primary60-color;
     background-color: transparent;
+  }
+}
+
+%outlinedOvalBtn {
+  &:hover {
+    color: $primary60-color;
+    @include dashedBorder($primary60-color);
+  }
+
+  &:focus {
+    color: $primary70-color;
+    @include dashedBorder($primary70-color);
   }
 }

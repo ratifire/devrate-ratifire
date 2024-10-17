@@ -25,12 +25,32 @@
   align-items: $alignItems;
 }
 
-@mixin brand_name($arg) {
-  @extend %brand_name;
+@mixin brandName($arg) {
+  @extend %brandName;
   font-weight: $font-medium;
   color: $primary50-color;
 
   .#{$arg}__logo {
     margin-right: 15px;
   }
+}
+
+@mixin dashedBorder($stroke-color) {
+  $stroke-color-encoded: "%23" + str-slice("#{$stroke-color}", 2);
+  $svg: '<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="none" rx="25" ry="25" stroke="#{$stroke-color-encoded}" stroke-width="2" stroke-dasharray="20" stroke-dashoffset="6" stroke-linecap="butt"/></svg>';
+  $encoded-svg: url("data:image/svg+xml;charset=UTF-8," + $svg);
+  background-image: $encoded-svg;
+}
+
+@mixin outlinedOvalBtn($color, $stroke-color) {
+  @include textBase($color: $color, $lh: 146%, $fz: 18px);
+  @include dashedBorder($stroke-color);
+  border-radius: 25px;
+  border: none;
+  background-color: $transparent-color;
+  padding: 9px 25px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    background-image 0.3s ease;
 }

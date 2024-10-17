@@ -3,6 +3,7 @@
   position: relative;
   z-index: 2; /* Ensure header is above the video */
   @include flexRow($justifyContent: space-between, $alignItems: center);
+  background: linear-gradient(180deg, #0d0d0d 0%, rgba(13, 13, 13, 0) 100%);
 
   &__container {
     @include flexRow($justifyContent: space-between, $alignItems: center);
@@ -11,13 +12,12 @@
       @include flexRow($alignItems: center);
 
       &-name {
-        @include brand_name($arg: header);
+        @include brandName($arg: header);
       }
     }
 
     .header__navbar {
-      font-size: 18px;
-      line-height: 26.28px;
+      @include textBase($fz: 18px, $lh: 146%);
 
       &-list {
         margin: 0 auto;
@@ -34,25 +34,11 @@
     }
 
     .header__button {
-      border: 1px dashed $primary50-color;
-      border-radius: 60px;
-      color: $primary50-color;
-      background-color: $transparent-color;
-      font-size: 18px;
-      line-height: 26.28px;
-      padding: 10px 24px;
-      transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
-
-      &:hover {
-        color: $white-color;
-        background-color: $primary70-color;
-      }
-
-      &:focus {
-        background-color: $primary40-color;
-      }
+      @include outlinedOvalBtn(
+        $color: $primary50-color,
+        $stroke-color: $primary50-color
+      );
+      @extend %outlinedOvalBtn;
     }
   }
 }
