@@ -32,19 +32,19 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 
-  @media screen and (min-width: $breakpoint-md) {
+  @media screen and (max-width: $breakpoint-md) {
     max-width: 510px;
   }
 
-  @media screen and (min-width: $breakpoint-lg) {
+  @media screen and (max-width: $breakpoint-lg) {
     max-width: 798px;
   }
 
-  @media screen and (min-width: $breakpoint-xl) {
+  @media screen and (max-width: $breakpoint-xl) {
     max-width: 1054px;
   }
 
-  @media screen and  (min-width: $breakpoint-xxl) {
+  @media screen and  (max-width: $breakpoint-xxl) {
     max-width: 1310px;
   }
 }
