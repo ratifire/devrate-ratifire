@@ -1,5 +1,13 @@
+.footer__container {
+  background-image: url("../../../assets/footer/footer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 0;
+}
 .footer__content {
-  @include flexRow($justifyContent: space-between);
+  display: flex;
+  gap: 300px;
 }
 
 .footer__brand {
@@ -8,44 +16,48 @@
 
   &-name {
     @include brandName($arg: footer);
+    color: $white-color;
   }
 }
 
-.footer__link {
-  color: $primary50-color;
-  cursor: pointer;
-}
-
 .footer__description {
-  @include textBase($color: $neutral200-color);
-  max-width: 408px;
-  margin-bottom: 192px;
+  &-text {
+    @include textBase($color: $white-color);
+    max-width: 408px;
+    margin-bottom: 192px;
+  }
 }
 
-.footer__copy {
-  @include textBase($fz: 12px, $color: $neutral200-color);
+.footer__copyright {
+  &-text {
+    @include textBase($fz: 12px, $color: $neutral200-color);
+    margin-bottom: 0;
+  }
 }
 
-.footer__contact {
+.footer__socials {
   @include flexColumn($justifyContent: space-between);
-  margin-bottom: 40px;
 }
 
 .footer__list {
-  @include flexRow($justifyContent: space-between);
+  @include flexRow($justifyContent: flex-start);
   gap: 40px;
   padding-left: 0;
 }
 
 .footer__item-link {
   display: inline-block;
-  @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
+  @include textBase($fz: 18px, $lh: 146%, $color: $white-color);
   @extend %link;
 }
 
-.footer__subtitle {
-  @include textBase($fz: 20px, $lh: 110%, $fw: $font-bold);
-  letter-spacing: -0.01em;
+.footer__contact {
+  display: flex;
+  gap: 300px;
+}
+
+.footer__contact-subtitle {
+  @include textBase($fz: 20px, $lh: 144%, $fw: $font-regular);
   margin-bottom: 16px;
 }
 
@@ -56,11 +68,14 @@
   @extend %link;
 }
 
-//styles for the background image in the footer
-
-//.footer-content {
-//  background-image: url("../../../assets/footer-bg-img.png");
-//  background-repeat: no-repeat;
-//  background-position: bottom;
-//  background-size: contain;
-//}
+.footer__contact-media {
+  @include flexColumn($justifyContent: space-between);
+  gap: 10px;
+}
+.footer__social-link {
+  display: inline-block;
+  text-align: center;
+  border-radius: 60px;
+  padding: 10px;
+  background-color: $white-color;
+}
