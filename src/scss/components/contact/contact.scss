@@ -81,10 +81,9 @@ input::placeholder {
 
 //breakpoints
 
-@media (min-width: $breakpoint-lg) {
+@media screen and (min-width: $breakpoint-lg) {
   .contact-img {
     width: 550px;
     height: 650px;
   }
-
 }
