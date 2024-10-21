@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "ngrok": "ngrok http 3000"
   },
   "author": "FLS",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "gulp-server-livereload": "^1.9.2",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-watch": "^5.0.1",
+    "ngrok": "^5.0.0-beta.2",
     "prettier": "3.3.3",
     "sass": "^1.69.5"
   },
