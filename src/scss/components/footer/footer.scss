@@ -1,3 +1,20 @@
+.footer {
+  position: relative;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.footer__top-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: url('../../../assets/footer/bg-footer-2.png');
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
 .footer__wrapper{
   background-image: url("../../../assets/footer/bg-footer.png");
   background-size: cover;
@@ -6,7 +23,7 @@
 }
 
 .footer__container {
-  padding: 40px 0;
+  padding: 80px 0 40px;
 }
 .footer__content {
   display: flex;
@@ -59,6 +76,12 @@
   gap: 300px;
 }
 
+.footer__contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .footer__contact-subtitle {
   @include textBase($fz: 20px, $lh: 144%, $fw: $font-regular);
   margin-bottom: 16px;
@@ -75,10 +98,30 @@
   @include flexColumn($justifyContent: space-between);
   gap: 10px;
 }
+
+.footer__contact-media {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
 .footer__social-link {
-  display: inline-block;
-  text-align: center;
-  border-radius: 60px;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background-color: $white-color;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__social-link:hover {
+  transform: scale(1.1);
+  background-color: $primary50-color;
 }
