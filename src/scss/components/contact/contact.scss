@@ -5,79 +5,89 @@
   }
 
   &__content {
-    @include flexRow($justifyContent: space-between);
-    gap: 100px;
+    @include flexRow();
+    gap: 85px;
   }
 
   &__img-wrapper {
     //box-shadow: -15px 10px 0px 0px $primary90-color;
   }
 
-  &__form-wrapper {
-    width: 522px;
-  }
-
   &__title {
     @extend %sectionTitle;
-    text-align: center;
+    margin: 0 0 8px 0;
   }
 
   &__description {
     @include textBase;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    max-width: 39.375rem;
+  }
+
+  &__links {
+    > *:not(:last-child) {
+      margin: 0 0 23px 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    @include textBase($white-color, 24px, $font-bold, 140%);
+    position: relative;
+    transform: translateX(48px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: -48px;
+    }
+
+    &--mail::before {
+      background-image: url("../../../assets/contacts/icons/mailIcon.png");
+    }
+
+    &--phone::before {
+      background-image: url("../../../assets/contacts/icons/phoneIcon.png");
+    }
+
+    &--linkedin::before {
+      background-image: url("../../../assets/contacts/icons/linkedinIcon.png");
+    }
+
+    &--facebook::before {
+      background-image: url("../../../assets/contacts/icons/facebookIcon.png");
+    }
+
+    &--telegram::before {
+      background-image: url("../../../assets/contacts/icons/telegramIcon.png");
+    }
+
+    &--youtube::before {
+      background-image: url("../../../assets/contacts/icons/youtubeIconpng.png");
+    }
+
+  }
+  &__socials {
+    margin: 21px 0 0 0;
+
+    &-title {
+      margin: 0 0 9px 0;
+      @include textBase($primary40-color, 32px, $font-medium, 140%);
+    }
   }
 }
 
-.contact-img {
 
+
+
+.contact-img {
   object-fit: cover;
   box-shadow: -15px 10px 0px 0px $primary90-color;
 }
 
-
-input,
-textarea {
-  @extend %input_style;
-}
-
-textarea::placeholder,
-input::placeholder {
-  @include textBase($fz: 18px, $lh: 146%, $color: $neutral200-color);
-}
-
-
-.form {
-
-  &__container {
-  }
-
-  &__input-wrapper {
-    position: relative;
-  }
-
-  &__input-user,
-  &__input-email,
-  &__input-company {
-    padding-left: 35px;
-  }
-
-  &__input-icon {
-    position: absolute;
-    top: 11px;
-    left: 0;
-  }
-
-  &__describe {
-    min-width: 522px;
-    height: 140px;
-    resize: none;
-  }
-
-  &__btn {
-    @extend %buttonBase;
-    width: 100%;
-  }
-}
 
 //breakpoints
 @media (max-width: $breakpoint-xl) {
