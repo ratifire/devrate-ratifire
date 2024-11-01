@@ -121,11 +121,11 @@ const watchers = () => {
     { events: ["add", "unlink"] },
     gulp.parallel(images),
   );
-  gulp.watch(
-    "./src/assets/**/*",
-    { events: ["add", "unlink"] },
-    gulp.parallel(videos),
-  );
+  // gulp.watch(
+  //   "./src/assets/**/*",
+  //   { events: ["add", "unlink"] },
+  //   gulp.parallel(videos),
+  // );
   gulp.watch(
     "./src/fonts/**/*",
     { events: ["add", "unlink"] },
