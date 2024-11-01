@@ -1,0 +1,56 @@
+@media screen and (max-width: $breakpoint-lg) {
+  .about-us {
+    margin-top: 120px;
+    margin-bottom: 100px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      @extend %flexColumn;
+      flex: 1 1 100%;
+      margin: 0;
+
+      .about-us__title {
+        @extend %sectionTitle;
+        font-size: 35px;
+        line-height: 130%;
+
+      }
+
+      .about-us__description {
+        @include textBase($fz: 16px, $lh: 125%);
+        margin: 0 0 20px 0;
+      }
+    }
+
+    &__image {
+      flex: 1 1 100%;
+
+      & img {
+        min-height: 210px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .about-us {
+
+    &__text {
+
+      .about-us__title {
+        font-size: 28px;
+        line-height: 118%;
+      }
+
+      .about-us__description {
+        @include textBase($fz: 14px, $lh: 120%);
+        margin: 0 0 1rem 0;
+      }
+    }
+  }
+}

@@ -23,15 +23,72 @@
     #0d0d0d 66.33%
   );
   z-index: 1;
+
+  @media screen and (min-width: $breakpoint-xs) {
+    height: 844px;
+  }
+
+  @media screen and (min-width: 402px) {
+    height: 822px;
+  }
+
+  @media screen and (min-width: 519px) {
+    height: 765px;
+  }
+
+  @media screen and (min-width: 518px) {
+    height: 822px;
+  }
+
+  @media screen and (min-width: 539px) {
+    height: 797px;
+  }
+
+  @media screen and (min-width: 560px) {
+    height: 937px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    height: 888px;
+  }
 }
 
 #particles-js {
   position: absolute;
   width: 100%;
-  height: 888px;
+
   background-color: #000;
   background-image: url("");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+
+
+  @media screen and (min-width: $breakpoint-xs) {
+    height: 844px;
+  }
+
+  @media screen and (min-width: 402px) {
+    height: 822px;
+  }
+
+  @media screen and (min-width: 519px) {
+    height: 765px;
+  }
+
+  @media screen and (min-width: 518px) {
+    height: 822px;
+  }
+
+  @media screen and (min-width: 539px) {
+    height: 797px;
+  }
+
+  @media screen and (min-width: 560px) {
+    height: 937px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    height: 888px;
+  }
 }
