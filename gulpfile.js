@@ -7,6 +7,7 @@ const fs = require("fs");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const sourcemaps = require("gulp-sourcemaps");
+const replace = require("gulp-replace");
 
 const startServer = () => {
   return gulp.src("./dist/").pipe(
@@ -76,16 +77,32 @@ const compileAnimationJs = () => {
   );
 };
 
+// const images = () => {
+//   return gulp.src("./src/assets/**/*").pipe(gulp.dest("./dist/assets/"));
+// };
+//
+// const videos = () => {
+//   return gulp.src("./src/assets/*.{mp4,mov}").pipe(gulp.dest("./dist/assets/"));
+// };
+//
+// const fonts = () => {
+//   return gulp.src("./src/fonts/**/*").pipe(gulp.dest("./dist/fonts/"));
+// };
+
+
 const images = () => {
-  return gulp.src("./src/assets/**/*").pipe(gulp.dest("./dist/assets/"));
+  return gulp.src("./src/assets/**/*.{jpg,jpeg,png,svg,gif}")
+    .pipe(gulp.dest("./dist/assets/"));
 };
 
-const videos = () => {
-  return gulp.src("./src/assets/*.{mp4,mov}").pipe(gulp.dest("./dist/assets/"));
-};
+// const videos = () => {
+//   return gulp.src("./src/assets/videos/*.{mp4,mov}")
+//     .pipe(gulp.dest("./dist/assets/videos/"));
+// };
 
 const fonts = () => {
-  return gulp.src("./src/fonts/**/*").pipe(gulp.dest("./dist/fonts/"));
+  return gulp.src("./src/fonts/**/*")
+    .pipe(gulp.dest("./dist/fonts/"));
 };
 
 const watchers = () => {
@@ -116,6 +133,21 @@ const watchers = () => {
   );
 };
 
+// change CSS paths
+// const updatePathsInCSS = () => {
+//   return gulp.src("./dist/css/**/*.css")
+//     .pipe(replace(/(\.\.\/\.\.\/assets\/)/g, './assets/'))
+//     .pipe(gulp.dest("./dist/css"));
+// };
+
+// change HTML paths
+const updatePathsInHTML = () => {
+  return gulp.src("./dist/**/*.html")
+    .pipe(replace(/(\.\.\/\.\.\/assets\/)/g, './assets/'))
+    .pipe(gulp.dest("./dist"));
+};
+
+
 exports.default = gulp.series(
   cleanFiles,
   gulp.parallel(
@@ -124,8 +156,22 @@ exports.default = gulp.series(
     compileMainJs,
     compileAnimationJs,
     images,
-    videos,
+    // videos,
     fonts,
   ),
   gulp.parallel(startServer, watchers),
+);
+
+exports.build = gulp.series(
+  cleanFiles,
+  gulp.parallel(
+    htmlCompile,
+    scssCompile,
+    compileMainJs,
+    compileAnimationJs,
+    images,
+    // videos,
+    fonts
+  ),
+  gulp.parallel(updatePathsInHTML, updatePathsInHTML)
 );
