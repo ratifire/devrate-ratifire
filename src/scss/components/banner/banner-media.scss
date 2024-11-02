@@ -1,0 +1,33 @@
+@media screen and (max-width: $breakpoint-lg) {
+  .banner {
+    margin-bottom: 100px;
+  }
+
+  .banner__container {
+    padding: 20px;
+  }
+
+  .banner__content {
+    &-title {
+      @include textBase(
+              $fz: 35px,
+              $fw: $font-bold,
+              $lh: 130%,
+      );
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .banner__content {
+    &-title {
+      @include textBase(
+              $fz: 28px,
+              $fw: $font-bold,
+              $lh: 118%,
+      );
+      text-transform: uppercase;
+    }
+  }
+}
