@@ -5,6 +5,7 @@
 
 .team-title {
   @extend %sectionTitle;
+  margin-bottom: 20px;
 }
 
 .team-swiper {
@@ -20,6 +21,7 @@
     height: 305px;
     margin-bottom: 6px;
   }
+
   &__slider {
     flex: 0 0 auto;
   }
