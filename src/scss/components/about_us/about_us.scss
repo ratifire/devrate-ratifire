@@ -8,18 +8,28 @@
 
   &__text {
     @include flexColumn;
-    max-width: 462px;
+    margin: 0 30px 0 0;
+    flex: 0 1 42.34375%;
 
     .about-us__title {
-      @extend %sectionTitle;
 
-      .about-us__description {
-        @include textBase;
-      }
+      @extend %sectionTitle;
+    }
+
+    .about-us__description {
+      @include textBase;
     }
   }
 
   &__image {
-    @extend %imageBlueLine;
+    flex: 0 1 57.65625%;
+    position: relative;
+
+    & img {
+      max-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
   }
 }

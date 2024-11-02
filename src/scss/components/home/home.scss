@@ -30,10 +30,10 @@
 
         .home-section__title {
           @include textBase(
-            $fz: 72px,
-            $lh: 130%,
-            $fw: $font-bold,
-            $ff: "Montserrat"
+                  $fz: 72px,
+                  $lh: 130%,
+                  $fw: $font-bold,
+                  $ff: "Montserrat"
           );
           margin-top: 40px;
         }
@@ -49,7 +49,12 @@
       }
 
       .home-section__image {
-        margin-top: -55px;
+        display: flex;
+        align-items: flex-end;
+
+        & img, source {
+          max-width: 100%;
+        }
       }
     }
   }
