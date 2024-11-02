@@ -6,32 +6,50 @@
   }
 
   &__image {
-    @extend %imageBlueLine;
+    flex: 1 1 49.21875%;
+
+    & img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__text {
     @include flexColumn;
-    max-width: 570px;
+    flex: 1 1 50.78125%;
+    margin: 0 0 0 30px;
   }
 
   &__title {
     @extend %sectionTitle;
   }
 
+  &__list {
+    padding: 0;
+  }
+
   &__item {
+    @include textBase($fz: 18px, $lh: 146%);
     position: relative;
-    margin-bottom: 16px;
-    margin-left: 8px;
+    margin-left: 46px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+
     &::before {
       content: "";
       position: absolute;
-      border-color: $primary70-color;
-      border-style: solid;
-      border-width: 8px;
-      top: 17px;
-      left: -29px;
-      margin-top: -16px;
+      background-color: $primary70-color;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
+      left: -26px;
+      top: 5px;
     }
+
   }
+
 }

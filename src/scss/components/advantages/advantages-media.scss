@@ -1,0 +1,59 @@
+@media screen and (max-width: $breakpoint-lg) {
+  .advantages {
+    margin-bottom: 100px;
+
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__text {
+      flex: 1 1 100%;
+      margin: 0;
+      padding: 0 0 237px 0;
+    }
+
+    &__title {
+      font-size: 35px;
+      line-height: 130%;
+      text-align: left;
+    }
+
+    &__item {
+      @include textBase($fz: 16px, $lh: 125%);
+      margin-left: 42px;
+
+      &::before {
+        width: 12px;
+        height: 12px;
+        left: -22px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .advantages {
+
+    &__title {
+      font-size: 28px;
+      line-height: 118%;
+    }
+
+    &__item {
+      @include textBase($fz: 14px, $lh: 130%);
+      margin: 0 0 16px 42px;
+
+      &::before {
+        width: 12px;
+        height: 12px;
+        left: -22px;
+      }
+    }
+  }
+}
+

@@ -48,3 +48,15 @@ img {
     max-width: 1310px;
   }
 }
+
+.img-shadow {
+  box-shadow: -16px 16px 0 0 $primary70-color, -8px 8px 12px 0 rgba(33, 87, 187, 0.6);
+
+  @media screen and (max-width: $breakpoint-xxl) {
+    box-shadow: -8px 8px 0 0 $primary70-color, -4px 4px 10px 0 rgba(33, 87, 187, 0.6);
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    box-shadow: -4px 4px 0 0 $primary70-color, -2px 2px 8px 0 rgba(33, 87, 187, 0.6);
+  }
+}
