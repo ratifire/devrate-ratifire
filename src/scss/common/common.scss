@@ -10,8 +10,6 @@ body {
   background-color: $page-background-color;
   color: $white-color;
   position: relative;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -59,4 +57,8 @@ img {
   @media screen and (max-width: $breakpoint-md) {
     box-shadow: -4px 4px 0 0 $primary70-color, -2px 2px 8px 0 rgba(33, 87, 187, 0.6);
   }
+}
+
+.p-fixBg {
+  padding-top: 80px;
 }

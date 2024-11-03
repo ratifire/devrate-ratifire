@@ -1,11 +1,13 @@
 @media screen and (max-width: $breakpoint-xl) {
   .advantages {
-    margin-bottom: 100px;
+    margin-bottom: 0;
 
     &__bg {
       padding: 0 0 237px 0;
       min-height: 736px;
-      background: url(../../assets/advantagesMob.png) 54% calc(100% + 114px) / cover no-repeat;
+      background-image: url("../../assets/advantagesMob.png");
+      background-repeat: no-repeat;
+      background-position: 46% 114%;
     }
 
     &__image {
@@ -43,10 +45,6 @@
 @media screen and (max-width: $breakpoint-lg) {
   .advantages {
 
-    &__bg {
-      background-position: 54% calc(100% + 195px);
-    }
-
     &__content {
       display: flex;
       flex-direction: column-reverse;
@@ -67,10 +65,6 @@
 @media screen and (max-width: 576px) {
   .advantages {
 
-    &__bg {
-      background-position: 54% calc(100% + 233px);
-    }
-
     &__title {
       font-size: 28px;
       line-height: 118%;
@@ -82,10 +76,3 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-md) {
-  .advantages {
-    &__bg {
-      background-position: 54% calc(100% + 290px);
-    }
-  }
-}

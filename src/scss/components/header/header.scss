@@ -1,7 +1,10 @@
 .header {
   height: 80px;
-  position: relative;
-  z-index: 2; /* Ensure header is above the video */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure header is above the video */
   @include flexRow($justifyContent: space-between, $alignItems: center);
   background: linear-gradient(180deg, #0d0d0d 0%, rgba(13, 13, 13, 0) 100%);
 

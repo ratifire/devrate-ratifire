@@ -1,6 +1,5 @@
 @media screen and (max-width: $breakpoint-lg) {
   .home-section {
-    height: auto;
 
     .container {
 
@@ -19,13 +18,10 @@
 
           .home-section__title {
             @include textBase(
-                    $fz: 65px,
-                    $lh: 130%,
-                    $fw: $font-bold,
-                    $ff: "Montserrat"
+                    $fz: 56px,
+                    $lh: 110%
             );
             text-align: center;
-            margin-top: 40px;
             margin: 40px 0 259px;
             grid-area: title;
             max-width: 400px;
@@ -62,17 +58,6 @@
       .home-section__content {
 
         .home-section__content-text {
-
-          .home-section__title {
-
-            @include textBase(
-                    $fz: 56px,
-                    $lh: 110%,
-                    $fw: $font-bold,
-                    $ff: "Montserrat"
-            );
-            text-align: center;
-          }
 
           .home-section__button {
             margin: 16px 0 0 0;
