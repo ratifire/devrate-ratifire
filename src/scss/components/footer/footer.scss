@@ -25,9 +25,14 @@
 .footer__container {
   padding: 80px 15px 40px;
 }
+
 .footer__content {
-  display: flex;
-  gap: 300px;
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  grid-template-areas: "description navigations"
+                        "copyright contacts";
+  justify-content: space-between;
+  column-gap: 50px;
 }
 
 .footer__brand {
@@ -40,24 +45,32 @@
   }
 }
 
-.footer__description {
+.footer__descriptions {
+  grid-area: description;
   &-text {
     @include textBase($color: $white-color);
-    max-width: 408px;
-    margin-bottom: 192px;
+    width: 408px;
   }
 }
 
 .footer__copyright {
+  grid-area: copyright;
+  align-self: end;
   &-text {
     @include textBase($fz: 12px, $color: $neutral200-color);
     margin-bottom: 0;
   }
 }
 
+footer__nav {
+  grid-area: nav;
+}
+
 .footer__socials {
   @include flexColumn($justifyContent: space-between);
+  grid-area: contacts;
 }
+
 
 .footer__list {
   @include flexRow($justifyContent: flex-start);
@@ -121,7 +134,9 @@
   height: 16px;
 }
 
-.footer__social-link:hover {
-  transform: scale(1.1);
-  background-color: $primary50-color;
+@media screen and (min-width: $breakpoint-xl) {
+  .footer__social-link:hover {
+    transform: scale(1.1);
+    background-color: $primary50-color;
+  }
 }
