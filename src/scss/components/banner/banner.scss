@@ -11,6 +11,7 @@
 .banner__content {
   @include flexRow(space-between);
   align-items: center;
+  column-gap: 10px;
 
   &-wrapper {
     @include flexColumn(center);
