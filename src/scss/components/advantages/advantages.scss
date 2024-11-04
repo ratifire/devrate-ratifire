@@ -18,7 +18,7 @@
   &__text {
     @include flexColumn;
     flex: 1 1 50.78125%;
-    margin: 0 0 0 30px;
+    margin: 0 0 0 50px;
   }
 
   &__title {
@@ -27,6 +27,7 @@
 
   &__list {
     padding: 0;
+    max-width: 570px
   }
 
   &__item {
@@ -37,7 +38,6 @@
     &:not(:last-child) {
       margin-bottom: 16px;
     }
-
 
     &::before {
       content: "";
