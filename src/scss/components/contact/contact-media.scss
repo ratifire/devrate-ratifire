@@ -47,7 +47,8 @@
     &__socials {
 
       &-title {
-        @include textBase($primary40-color, 28px, $font-medium, 140%);
+        @include textBase($color: $primary40-color, $fz: 35px, $fw: $font-bold, $lh: 140%);
+        text-transform: uppercase;
       }
     }
   }
@@ -72,7 +73,7 @@
     &__socials {
 
       &-title {
-        @include textBase($primary40-color, 28px, $font-medium, 140%);
+        @include textBase($color: $primary40-color, $fz: 28px, $fw: $font-bold, $lh: 118%);
       }
     }
   }

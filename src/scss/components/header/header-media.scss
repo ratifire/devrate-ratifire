@@ -1,0 +1,19 @@
+@media screen and (max-width: $breakpoint-lg) {
+  .header {
+    padding: 10px 0;
+
+    &__navbar {
+      display: none;
+    }
+
+    &__brand {
+      max-width: 125px;
+      max-height: 32px;
+    }
+
+    &__contact-btn {
+      display: none;
+    }
+
+  }
+}

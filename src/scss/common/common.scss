@@ -62,3 +62,13 @@ img {
 .p-fixBg {
   padding-top: 80px;
 }
+
+.contact-btn {
+  & button {
+    @include outlinedOvalBtn(
+            $color: $primary50-color,
+            $stroke-color: $primary50-color
+    );
+    @extend %outlinedOvalBtn;
+  }
+}
