@@ -90,8 +90,8 @@
     margin: 23px 0 0 0;
 
     &-title {
-      margin: 0 0 10px 0;
-      @include textBase($primary40-color, 32px, $font-medium, 140%);
+      margin: 0 0 14px 0;
+      @include textBase($color: $primary40-color, $fz: 32px, $fw: $font-medium, $lh: 140%);
     }
   }
 }

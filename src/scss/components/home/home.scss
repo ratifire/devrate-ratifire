@@ -39,6 +39,10 @@
           margin-top: 40px;
         }
 
+        .home__contact-btn {
+          display: none;
+        }
+
         .home-section__button {
           @extend %buttonBase;
           width: 40%;

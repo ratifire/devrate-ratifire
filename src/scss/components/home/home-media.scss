@@ -9,29 +9,45 @@
 
         .home-section__content-text {
           display: grid;
-          grid-template: repeat(3, auto) / 1fr;
+          grid-template: repeat(4, auto) / 1fr;
           grid-template-areas: "title"
                                 "paragraph"
+                                "contact"
                                 "button";
           justify-items: center;
           width: 100%;
 
           .home-section__title {
             @include textBase(
+                    $fw: $font-bold,
+                    $ff: "Montserrat",
                     $fz: 56px,
                     $lh: 110%
             );
+
             text-align: center;
-            margin: 40px 0 259px;
+            margin: 66px 0 161px;
             grid-area: title;
             max-width: 400px;
+          }
+
+          .home__contact-btn {
+            display: block;
+            grid-area: contact;
+            width: 100%;
+            margin: 16px 0;
+
+            & button {
+              width: 100%;
+              text-align: center;
+            }
           }
 
           .home-section__button {
             @extend %buttonBase;
             width: 100%;
             grid-area: button;
-            margin: 20px 0 0 0;
+            margin: 0;
             padding: 12px 0;
           }
 
@@ -60,7 +76,6 @@
         .home-section__content-text {
 
           .home-section__button {
-            margin: 16px 0 0 0;
             padding: 8px 0;
           }
 
