@@ -17,6 +17,9 @@
 
     &__img-wrapper {
       flex: 1 1 100%;
+      & img {
+        height: auto;
+      }
     }
 
     &__links-wrapper {
