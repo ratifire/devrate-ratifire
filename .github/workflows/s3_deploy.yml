@@ -34,10 +34,22 @@ jobs:
 
       - name: Build
         run: npm install && npm run build
+        
+      - name: List all files
+        run: |
+          echo "Repository root directory: /home/runner/work/devrate-ratifire/devrate-ratifire"
+          echo "All files and directories in repository root:"
+          ls -R /home/runner/work/devrate-ratifire/devrate-ratifire
+          
+      - name: List all files
+        run: |
+          echo "Repository root directory: "
+          echo "All files and directories in repository root:"
+          ls -R
 
       - name: Sync files to S3
         run: |
-          aws s3 sync build/ s3://${{ env.S3_BUCKET_NAME }} --acl public-read --delete
+          aws s3 sync dist/ s3://${{ env.S3_BUCKET_NAME }} --acl public-read --delete
         working-directory: /home/runner/work/devrate-ratifire/devrate-ratifire
         env:
           S3_BUCKET: ${{ env.S3_BUCKET_NAME }}
