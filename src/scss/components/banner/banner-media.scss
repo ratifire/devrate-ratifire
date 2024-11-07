@@ -1,33 +1,50 @@
+@media screen and (max-width: $breakpoint-xxl) {
+  .banner {
+    &__content {
+      &-title {
+        text-wrap: wrap;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $breakpoint-lg) {
   .banner {
     margin-bottom: 100px;
-  }
 
-  .banner__container {
-    padding: 20px;
-  }
+    &__container {
+      padding: 20px;
+    }
 
-  .banner__content {
-    &-title {
-      @include textBase(
-              $fz: 35px,
-              $fw: $font-bold,
-              $lh: 130%,
-      );
-      text-transform: uppercase;
+    &__content {
+      &-title {
+        @include textBase(
+                $fz: 35px,
+                $fw: $font-bold,
+                $lh: 130%,
+                $color: $primary30-color
+        );
+        text-transform: uppercase;
+      }
+    }
+
+    &__slider {
+      height: 1.3em;
     }
   }
 }
 
 @media screen and (max-width: $breakpoint-md) {
-  .banner__content {
-    &-title {
-      @include textBase(
-              $fz: 28px,
-              $fw: $font-bold,
-              $lh: 118%,
-      );
-      text-transform: uppercase;
+  .banner {
+    &__content {
+      &-title {
+        @include textBase(
+                $fz: 28px,
+                $fw: $font-bold,
+                $lh: 118%,
+        );
+        text-transform: uppercase;
+      }
     }
   }
 }

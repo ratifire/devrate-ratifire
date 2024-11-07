@@ -50,6 +50,7 @@
       word-break: break-all;
       width: 100%;
       max-width: 100%;
+      @extend  %link;
     }
 
     &::before {
@@ -95,4 +96,3 @@
     }
   }
 }
-

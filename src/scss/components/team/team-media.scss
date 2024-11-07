@@ -1,55 +1,57 @@
 @media screen and (max-width: $breakpoint-lg) {
   .team {
-    margin-bottom: 115px;
-  }
+    margin-bottom: 100px;
 
-  .team-title {
-    font-size: 35px;
-    line-height: 130%;
-  }
-
-  .team-swiper {
-
-    &__img {
-      width: 274px;
-      height: 274px;
+    &-title {
+      font-size: 35px;
+      line-height: 130%;
     }
 
-    &__slide {
-      flex: 0 0 289px;
+    &-swiper {
+
+      &__img {
+        width: 274px;
+        height: 274px;
+      }
+
+      &__slide {
+        flex: 0 0 289px;
+      }
     }
-  }
 
-  .team-inner {
+    &-inner {
 
-    &__subtitle a {
-      @include textBase($fz: 18px, $fw: $font-medium, $lh: 135%);
+      &__subtitle a {
+        @include textBase($fz: 18px, $fw: $font-medium, $lh: 135%);
+      }
+
+      &__desc {
+        @include textBase($fz: 15px, $fw: $font-regular, $lh: 153%);
+      }
     }
 
-    &__desc {
-      @include textBase($fz: 15px, $fw: $font-regular, $lh: 153%);
+    &-pagination {
+      display: none;
     }
-  }
-
-  .team-pagination {
-    display: none;
   }
 }
 
 @media screen and (max-width: $breakpoint-md) {
-  .team-title {
-    font-size: 28px;
-    line-height: 118%;
-  }
-
-  .team-inner {
-
-    &__subtitle a {
-      @include textBase($fz: 16px, $fw: $font-medium, $lh: 128%);
+  .team {
+    &-title {
+      font-size: 28px;
+      line-height: 118%;
     }
 
-    &__desc {
-      @include textBase($fz: 14px, $fw: $font-regular, $lh: 150%);
+    &-inner {
+
+      &__subtitle a {
+        @include textBase($fz: 16px, $fw: $font-medium, $lh: 128%);
+      }
+
+      &__desc {
+        @include textBase($fz: 14px, $fw: $font-regular, $lh: 150%);
+      }
     }
   }
 }

@@ -3,83 +3,86 @@
     &__content {
       column-gap: 30px;
     }
-  }
-}
-
-@media screen and (max-width: $breakpoint-lg) {
-  .contact {
-    margin-bottom: 100px;
-
-    &__content {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    &__img-wrapper {
-      flex: 1 1 100%;
-      & img {
-        height: auto;
-      }
-    }
-
-    &__links-wrapper {
-      flex: 1 1 100%;
-      margin: 0 0 40px 0;
-    }
-
-    &__title {
-      font-size: 35px;
-      line-height: 130%;
-    }
-
-    &__description {
-      @include textBase;
-      max-width: 100%;
-    }
-
-    &__links {
-      > *:not(:last-child) {
-        margin-bottom: 20px;
-      }
-    }
-
-    &__link {
-      @include textBase($fz: 27px, $fw: $font-bold, $lh: 133%);
-    }
-
-    &__socials {
-
-      &-title {
-        @include textBase($color: $primary40-color, $fz: 35px, $fw: $font-bold, $lh: 140%);
-        text-transform: uppercase;
-      }
     }
   }
-}
 
-@media screen and (max-width: $breakpoint-md) {
-  .contact {
-    &__title {
-      font-size: 28px;
-      line-height: 118%;
-    }
+  @media screen and (max-width: $breakpoint-lg) {
+    .contact {
+      margin-bottom: 100px;
 
-    &__description {
-      font-size: 14px;
-      max-width: 100%;
-    }
+      &__content {
+        display: flex;
+        flex-direction: column-reverse;
+      }
 
-    &__link {
-      @include textBase($fz: 24px, $fw: $font-bold, $lh: 122%);
-    }
+      &__img-wrapper {
+        flex: 1 1 100%;
 
-    &__socials {
+        & img {
+          height: auto;
+        }
+      }
 
-      &-title {
-        @include textBase($color: $primary40-color, $fz: 28px, $fw: $font-bold, $lh: 118%);
+      &__links-wrapper {
+        flex: 1 1 100%;
+        margin: 0 0 40px 0;
+      }
+
+      &__title {
+        font-size: 35px;
+        line-height: 130%;
+      }
+
+      &__description {
+        @include textBase;
+        max-width: 100%;
+      }
+
+      &__links {
+        > *:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &__link {
+        @include textBase($fz: 16px, $fw: $font-medium, $lh: 128%);
+
+        & a {
+          &:active {
+            color: $primary60-color;
+          }
+        }
+      }
+
+      &__socials {
+
+        &-title {
+          @include textBase($color: $primary40-color, $fz: 35px, $fw: $font-bold, $lh: 140%);
+          text-transform: uppercase;
+        }
       }
     }
   }
-}
+
+  @media screen and (max-width: $breakpoint-md) {
+    .contact {
+      &__title {
+        font-size: 28px;
+        line-height: 118%;
+      }
+
+      &__description {
+        font-size: 14px;
+        max-width: 100%;
+      }
+
+      &__socials {
+
+        &-title {
+          @include textBase($color: $primary40-color, $fz: 28px, $fw: $font-bold, $lh: 118%);
+        }
+      }
+    }
+  }
 
 
