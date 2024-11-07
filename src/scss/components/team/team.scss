@@ -1,59 +1,61 @@
 .team {
   margin-bottom: 160px;
   overflow-x: hidden;
-}
 
-.team-title {
-  @extend %sectionTitle;
-  margin-bottom: 20px;
-}
-
-.team-swiper {
-  width: 100%;
-
-  &__wrapper {
-    display: flex;
+  &-title {
+    @extend %sectionTitle;
     margin-bottom: 20px;
   }
 
-  &__img {
-    width: 305px;
-    height: 305px;
-    margin-bottom: 6px;
+  &-swiper {
+    width: 100%;
+
+    &__wrapper {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      width: 305px;
+      height: 305px;
+      margin-bottom: 6px;
+    }
+
+    &__slide {
+      flex: 0 0 320px;
+    }
   }
 
-  &__slide {
-    flex: 0 0 320px;
+  &-inner {
+    @include flexRow($justifyContent: space-between, $alignItems: center);
+    padding: 10px;
+
+    &__subtitle a {
+      @include textBase($white-color, 20px, 400, 144%);
+    }
+
+    &__desc {
+      @include textBase($white-color, 16px, 400, 150%);
+    }
   }
+
+  &-btn {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='95' ry='95' stroke='%23608EFFFF' stroke-width='4' stroke-dasharray='40%25%2c 40%25' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
+    border-radius: 100px;
+    padding: 10px;
+
+    &__link {
+      text-decoration: none;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 60px;
+    }
+  }
+
+  &-pagination {
+    @include flexRow($justifyContent: flex-end);
+    gap: 16px;
+  }
+
 }
 
-.team-inner {
-  @include flexRow($justifyContent: space-between, $alignItems: center);
-  padding: 10px;
-
-  &__subtitle a {
-    @include textBase($white-color, 20px, 400, 144%);
-  }
-
-  &__desc {
-    @include textBase($white-color, 16px, 400, 150%);
-  }
-}
-
-.team-btn {
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='95' ry='95' stroke='%23608EFFFF' stroke-width='4' stroke-dasharray='40%25%2c 40%25' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
-  border-radius: 100px;
-  padding: 10px;
-
-  &__link {
-    text-decoration: none;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 60px;
-  }
-}
-
-.team-pagination {
-  @include flexRow($justifyContent: flex-end);
-  gap: 16px;
-}

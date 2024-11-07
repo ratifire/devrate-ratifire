@@ -64,13 +64,22 @@
 %link {
   color: $white-color;
   transition: color 0.3s ease;
-  &:hover {
-    color: $primary70-color;
+  
+  @media screen and (max-width: $breakpoint-xl) {
+    &:active {
+      color: $primary50-color;
+    }
   }
 
-  &:focus {
-    color: $primary40-color;
+  @media screen and (min-width: $breakpoint-xl) {
+    &:hover {
+      color: $primary70-color;
+    }
+
   }
+  //&:focus {
+  //  color: $primary40-color;
+  //}
 }
 
 %input_style {
@@ -86,6 +95,7 @@
   &:hover {
     border-color: $primary40-color;
   }
+
   &:focus {
     outline: none;
     border-color: $primary60-color;

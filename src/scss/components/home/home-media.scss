@@ -1,5 +1,6 @@
 @media screen and (max-width: $breakpoint-lg) {
   .home-section {
+    height: 674px;
 
     .container {
 
@@ -26,7 +27,7 @@
             );
 
             text-align: center;
-            margin: 66px 0 161px;
+            margin: 18px 0 56px;
             grid-area: title;
             max-width: 400px;
           }
