@@ -50,7 +50,7 @@
       word-break: break-all;
       width: 100%;
       max-width: 100%;
-      @extend  %link;
+      @extend %link;
     }
 
     &::before {
@@ -62,27 +62,27 @@
     }
 
     &--mail::before {
-      background-image: url("../../../assets/contacts/icons/mailIcon.png");
+      background-image: url("../../../assets/contacts/icons/mailIcon.svg");
     }
 
     &--phone::before {
-      background-image: url("../../../assets/contacts/icons/phoneIcon.png");
+      background-image: url("../../../assets/contacts/icons/phoneIcon.svg");
     }
 
     &--linkedin::before {
-      background-image: url("../../../assets/contacts/icons/linkedinIcon.png");
+      background-image: url("../../../assets/contacts/icons/linkedinIcon.svg");
     }
 
     &--facebook::before {
-      background-image: url("../../../assets/contacts/icons/facebookIcon.png");
+      background-image: url("../../../assets/contacts/icons/facebookIcon.svg");
     }
 
     &--telegram::before {
-      background-image: url("../../../assets/contacts/icons/telegramIcon.png");
+      background-image: url("../../../assets/contacts/icons/telegramIcon.svg");
     }
 
     &--youtube::before {
-      background-image: url("../../../assets/contacts/icons/youtubeIconpng.png");
+      background-image: url("../../../assets/contacts/icons/youtubeIconpng.svg");
     }
 
   }
