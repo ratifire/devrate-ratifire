@@ -10,7 +10,7 @@ on:
 
 env:
   AWS_REGION: 'eu-north-1'                    # set this to your preferred AWS region, e.g. eu-north-1
-  S3_BUCKET_NAME: 'ratifire'
+  S3_BUCKET_NAME: 'ratifire.org'
 
 
 permissions:
